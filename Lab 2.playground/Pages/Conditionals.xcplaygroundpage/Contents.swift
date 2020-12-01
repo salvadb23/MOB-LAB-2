@@ -6,7 +6,7 @@
 print("How's it going?")
 
 // Set your current mood as a String below
-var mood : String = ""
+var mood : String = "happy"
 
 /*:
 - experiment:
@@ -15,7 +15,11 @@ If the reply is "Good" print Great!
 Otherwise, if you said "Bad", print Oh no!
 In all other cases, I reply "I see..."
 */
-
+if mood == "happy" {
+    print("Great!")
+} else {
+    print("I see...")
+}
 
 /*:
 ### Combining Conditionals
@@ -36,7 +40,13 @@ if 2 * 2 == 4 && 3 + 3 == 6 {
 Write an if statement that uses a && to compare the mood and the time. You should only reply Great! when you're in a good mood and the time is greater than 7. Imagine this is AM! It's hard to be in a "Great!" mood before 7am.
 If the time  > 7 and mood is Good then print Great!
 */
-var time : Int = 0
+var time : Int = 10
+
+if mood == "happy" && time > 7 {
+    print("Great")
+} else {
+    print("Oh no")
+}
 
 
 
@@ -64,7 +74,11 @@ if pet == "bunny" || pet == "puppy" {
 
  Test your work by setting the values for mood and time to different values.
 */
-
+if mood == "happy" || time > 7 {
+    print("Great")
+} else {
+    print("Oh no")
+}
 
 /*:
 ### Conditionals and Functions
@@ -86,6 +100,15 @@ if pet == "bunny" || pet == "puppy" {
  ```
 */
 
+//func stringToEmoji(word: String) -> Character {
+//    if(word == "happy") {
+//        return "😀"
+//    }
+//    else {
+//        return "🤔"
+//    }
+//}
+
 
 
 /*:
@@ -102,7 +125,22 @@ otherwise -> "🤔"
 ```
 Test your work by calling the function four times with four different words and print the response. Make sure the response shows each of the four possible emojis.
 */
-
+//func stringToEmoji(text:String) -> Character {
+//    if(text == "happy") {
+//        return "😀"
+//    }
+//    if(text == "laughing") {
+//        return "😆"
+//    }
+//
+//    if(text == "cool") {
+//        return "😎"
+//    }
+//
+//    else {
+//        return "🤔"
+//    }
+//}
 
 
 
@@ -121,7 +159,22 @@ But there are a few details that need some work. While the emojis are good, you 
 
  Test your work for all possible words.
 */
-
+func stringToEmoji(text:String) -> Character {
+    if(text == "happy" || text == "good" || text == "okay" || text == "awesome" || text == "lit" || text == "fun") {
+        return "😀"
+    }
+    if(text == "laughing") {
+        return "😆"
+    }
+    
+    if(text == "cool") {
+        return "😎"
+    }
+    
+    else {
+        return "🤔"
+    }
+}
 
 
 
